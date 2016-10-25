@@ -1,57 +1,21 @@
-Node-RED Bluemix Starter Application
-====================================
+## Server Application in node-red
+Server Application - node-red. The flow exposes one REST API that takes user credential via HTTP POST method, verifies the user and return a message.
 
-### Node-RED in BlueMix
+### Video Tutorials
+1. [Part 1 - What is mobile cloud development and why do you need it?] (https://youtu.be/E4IRq-e7bzY)
 
-This repository is an example Node-RED application that can be deployed into
-Bluemix with only a couple clicks. Try it out for yourself right now by clicking:
+2. [Part 2 - What are the basic components of mobile cloud development?] (https://youtu.be/hhA1k7ScCfM)
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/snippet-java/mobile_cloud_node-red_backend.git)
+3. [Part 3 - Android Native Client] (https://youtu.be/h-S93xiEKIQ?list=PLIhrPGqyfMrjtY2ul21FVudVJ714bfuRn)
 
-### How does this work?
+### Other Important Resources
 
-When you click the button, you are taken to Bluemix where you get a pick a name
-for your application at which point the platform takes over, grabs the code from
-this repository and gets it deployed.
+1. [Server Application using NodeJS](https://github.com/snippet-java/mobile_cloud_nodejs_backend) 
 
-It will automatically create an instance of the Cloudant service, call it
-`sample-node-red-cloudantNoSQLDB` and bind it to you app. This is where your
-Node-RED instance will store its data. If you deploy multiple instances of
-Node-RED from this repository, they will share the one Cloudant instance.
+2. [Server Application using java](https://github.com/snippet-java/mobile_cloud_java_backend) 
 
-It includes a set of default flows that are automatically deployed the first time
-Node-RED runs.
+3. [Android Native Client Application](https://www.google.com) 
 
-### Customising Node-RED
+Deploy this application to your bluemix account by clicking:
 
-This repository is here to be cloned, modified and re-used to allow anyone create
-their own Node-RED based application that can be quickly deployed to Bluemix.
-
-The default flows are stored in the `defaults` directory in the file called `flow.json`.
-
-The web content you get when you go to the application's URL is stored under the
-`public` directory.
-
-Additional nodes can be added to the `package.json` file and all other Node-RED
-configuration settings can be set in `bluemix-settings.js`.
-
-If you do clone this repository, make sure you update this `README.md` file to point
-the `Deploy to Bluemix` button at your repository.
-
-If you want to change the name of the Cloudant instance that gets created, the memory
-allocated to the application or other deploy-time options, have a look in `manifest.yml`.
-
-### Privacy Notice
-
-This package is configured to track deployments to IBM Bluemix and other Cloud Foundry platforms. The following information is sent to a Deployment Tracker service on each deployment:
-
-* Node.js package version
-* Node.js repository URL
-* Application Name (application_name)
-* Space ID (space_id)
-* Application Version (application_version)
-* Application URIs (application_uris)
-* Labels of bound services
-* Number of instances for each bound service and associated plan information
-
-This data is collected from the package.json file in this application and the VCAP_APPLICATION and VCAP_SERVICES environment variables in IBM Bluemix and other Cloud Foundry platforms. This data is used by IBM to track metrics around deployments of this applications to IBM Bluemix to measure the usefulness of our examples, so that we can continuously improve the content we offer to you. Only deployments of sample applications that include code to ping the Deployment Tracker service will be tracked.
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/snippet-java/mobile_cloud_java_backend.git)
