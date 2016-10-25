@@ -14,7 +14,7 @@ Server Application - node-red. The flow exposes one REST API that takes user cre
 
 2. [Server Application using java](https://github.com/snippet-java/mobile_cloud_java_backend) 
 
-3. [Android Native Client Application](https://www.google.com) 
+3. [Android Native Client Application](https://github.com/snippet-java/mobile_cloud_android_frontend) 
 
 Deploy this application to your bluemix account by clicking:
 
