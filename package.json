@@ -1,0 +1,45 @@
+{
+    "name"         : "node-red-playground-bluemix-starter",
+    "version"      : "0.5.0",
+    "dependencies": {
+        "express": "~4.14.x",
+        "when": "~3.x",
+        "nano": "~5.11.0",
+        "cfenv":"~1.0.0",
+        "feedparser":"~0.19.2",
+        "redis":"~0.10.1",
+        
+        "body-parser": "*",
+        "cookie-parser": "*",
+        
+        "node-red": "0.x",
+        "node-red-node-box": "*",
+        "node-red-node-exif": "*",
+        "node-red-node-mysql": "*",
+        "node-red-node-watson": "*",
+        "node-red-node-flickr": "*",
+        "node-red-node-dropbox": "*",
+        "node-red-node-openwhisk": "*",
+        "node-red-node-cf-cloudant": "*",
+        "node-red-bluemix-nodes": "*",
+        "node-red-contrib-redis": "*",
+        "node-red-contrib-scx-ibmiotapp": "*",
+        "node-red-contrib-ibmpush": "*",
+        "node-red-contrib-bluemix-hdfs": "*",
+        "node-red-nodes-cf-sqldb-dashdb": "*",
+        
+        "adm-zip": "*",
+        "cf-deployment-tracker-client": "*"
+    },
+    "engines": {
+        "node": "0.12.x"
+    },
+    "main": "app.js",
+    "scripts": {
+        "start": "node --max-old-space-size=384 app.js --settings ./bluemix-settings.js -v"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/snippet-java/node-red-playground-bluemix-starter.git"
+    }
+}

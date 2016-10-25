@@ -1,0 +1,82 @@
+[{
+	"id": "9e11411.3ba6fc",
+	"type": "tab",
+	"label": "Mobile Cloud Backend in Node-Red"
+}, {
+	"id": "5f3fc9b6.d55bd8",
+	"type": "http in",
+	"z": "9e11411.3ba6fc",
+	"name": "HTTP Request POST /checklogin",
+	"url": "/checklogin",
+	"method": "post",
+	"swaggerDoc": "",
+	"x": 207,
+	"y": 322,
+	"wires": [
+		["dd8afb26.e99508"]
+	]
+}, {
+	"id": "a329a4c3.a85d88",
+	"type": "http response",
+	"z": "9e11411.3ba6fc",
+	"name": "HTTP Response",
+	"x": 845,
+	"y": 322,
+	"wires": []
+}, {
+	"id": "dd8afb26.e99508",
+	"type": "function",
+	"z": "9e11411.3ba6fc",
+	"name": "Create a response",
+	"func": "var user_name = msg.req.body.user_name;\nvar user_password = msg.req.body.user_password;\nif( !user_name || !user_password) {\nmsg.payload = {\"result\":\"error\", \"description\" : \"Credential missing\" }\n} \nelse if(user_name == \"test_username\" && user_password == \"test_password\") {\nmsg.payload = {\"result\":\"success\", \"record\":\"You are outstanding\" }\n}\nelse {\nmsg.payload = {\"result\": \"error\", \"description\": \"Incorrect credentials\" }\n}\nreturn msg;",
+	"outputs": 1,
+	"noerr": 0,
+	"x": 552,
+	"y": 324,
+	"wires": [
+		["a329a4c3.a85d88"]
+	]
+}, {
+	"id": "a8ae1d15.2a1db",
+	"type": "comment",
+	"z": "9e11411.3ba6fc",
+	"name": "Readme",
+	"info": "HTTP Request node is used to create and endpoint\nfor /checklogin. When a user visit's the endpoint the request\nis captured and sends it to function node.\n\nFunction node extracts the user_name and user_password\nprovided and create a response to be passed. This message\nis passed to HTTP Response.\n\nHTTP Response node send the response back to the request.\n\n****\n\nThe get for /checklogin is used to return a general messsage\n",
+	"x": 133.5,
+	"y": 266,
+	"wires": []
+}, {
+	"id": "e586ca1d.bfebd8",
+	"type": "http in",
+	"z": "9e11411.3ba6fc",
+	"name": "HTTP Request GET/checklogin",
+	"url": "/checklogin",
+	"method": "get",
+	"swaggerDoc": "",
+	"x": 200,
+	"y": 485,
+	"wires": [
+		["62dce155.e6cea"]
+	]
+}, {
+	"id": "a56210d1.2746e",
+	"type": "http response",
+	"z": "9e11411.3ba6fc",
+	"name": "HTTP Response",
+	"x": 869,
+	"y": 486,
+	"wires": []
+}, {
+	"id": "62dce155.e6cea",
+	"type": "function",
+	"z": "9e11411.3ba6fc",
+	"name": "Create a response",
+	"func": "msg.payload = \"hello! , This is node-red backend for mobile cloud app. Post to /checklogin with user_name and user_password.\"\nreturn msg;",
+	"outputs": 1,
+	"noerr": 0,
+	"x": 568,
+	"y": 485,
+	"wires": [
+		["a56210d1.2746e"]
+	]
+}]
